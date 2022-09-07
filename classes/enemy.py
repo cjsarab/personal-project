@@ -4,3 +4,6 @@ class Enemy:
         self.name = name
         self.health = health
         self.strength = strength
+
+    def attack_player(self, weapon, player):
+        pass

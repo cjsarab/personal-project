@@ -4,4 +4,3 @@ class Weapon:
         self.type = type
         self.name = name
         self.strength = strength
-

@@ -1,6 +1,5 @@
 class Player:
-    def __init__(self, name, health, strength, money):
+    def __init__(self, name, health, strength):
         self.name = name
         self.health = health
         self.strength = strength
-        self.money = money
