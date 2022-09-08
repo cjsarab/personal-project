@@ -39,3 +39,6 @@ class TestPlayer(unittest.TestCase):
         self.assertEqual(11, self.player.strength)
 
     def test_player_strong_attack_enemy(self):
+        self.player.player_strong_attack_enemy(self.player.strength, self.enemy2)
+        self.assertEqual(5, self.enemy2.health)
+        self.assertEqual(8, self.player.strength)
