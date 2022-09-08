@@ -10,3 +10,11 @@ class Player:
 
     def player_heal(self):
         self.health += 3
+
+    def player_increase_strength(self):
+        self.strength += 1
+
+    def player_strong_attack_enemy(self, strength, enemy):
+        attack_strength = round (self.strength * 1.5)
+        enemy.health -= attack_strength
+        self.strength -= 2

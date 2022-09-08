@@ -33,3 +33,9 @@ class TestPlayer(unittest.TestCase):
     def test_player_heal(self):
         self.player.player_heal()
         self.assertEqual(33, self.player.health)
+
+    def test_player_increase_strength(self):
+        self.player.player_increase_strength()
+        self.assertEqual(11, self.player.strength)
+
+    def test_player_strong_attack_enemy(self):
