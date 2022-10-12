@@ -4,7 +4,7 @@ class Player:
         self.health = health
         self.strength = strength
 
-    def attack_enemy(self, strength, enemy):
+    def attack_enemy(self, attack_strength, enemy):
         attack_strength = round(self.strength * 0.7)
         enemy.health -= attack_strength
 
