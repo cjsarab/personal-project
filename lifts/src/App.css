@@ -4,8 +4,37 @@
 
 
 .lift-container {
-  display: inline-block;
+  display: block;
   width: 80%;
   height: 1440px;
   background: lightgray;
+}
+
+.lift-shafts {
+  display: flex;
+  grid-template-rows: auto;
+}
+
+.lift-shaft-1 {
+  display: block;
+  width: 25%;
+  height: 1240px;
+  background: gray;
+  margin: 56px;
+}
+
+.lift-shaft-2 {
+  display: block;
+  width: 25%;
+  height: 1240px;
+  background: gray;
+  margin: 56px;
+}
+
+.lift {
+  display: block;
+  width: 90%;
+  height: 300px;
+  background-color: black;
+  margin: 8px;
 }

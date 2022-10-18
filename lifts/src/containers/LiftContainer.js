@@ -1,4 +1,6 @@
 import React, {useState} from 'react';
+import LiftShaft1 from '../components/LiftShaft1';
+import LiftShaft2 from '../components/LiftShaft2';
 
 const LiftContainer = () => {
 
@@ -7,7 +9,14 @@ const LiftContainer = () => {
 
 
   return (
-    <div className="lift-container">LiftContainer</div>
+    <>
+    <div className="lift-container">
+        <div className="lift-shafts">
+    <LiftShaft1 floor={floorLift1}/>
+    <LiftShaft2 floor={floorLift2}/>
+    </div>
+    </div>
+    </>
   )
 }
 
