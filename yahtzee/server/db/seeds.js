@@ -1,8 +1,10 @@
-use yahtzee;
+use personalyahtzee;
 db.dropDatabase();
 
 db.scores.insertMany([
     {
-        score: 30
+        throw1: {
+            [1,2,3,4,5]
+        }
     }
 ]);

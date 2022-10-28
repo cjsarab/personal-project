@@ -1,8 +1,15 @@
-import React from 'react'
+import React from 'react';
 
-const RollDiceButton = () => {
+const RollDiceButton = ({rollUnlockedDice}) => {
+
+    const handleClick = () => {
+        rollUnlockedDice();
+        return
+    }
+
+
   return (
-    <button>Roll Dice!</button>
+    <button onClick={handleClick}>Roll Dice!</button>
   );
 };
 
