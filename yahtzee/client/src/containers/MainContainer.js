@@ -26,10 +26,15 @@ const MainContainer = () => {
         if (lockedDice[i] === false) {
             const roll = 1 + Math.floor(Math.random() * 6);
             tempDice[i] = roll;
-        }
-      }
+        };
+      };
       const tempArray = [tempDice[0], tempDice[1], tempDice[2], tempDice[3], tempDice[4]];
       setCurrentRoll(tempArray);
+
+      console.log(currentRoll)
+
+      YahtzeeService.addRoll(currentRoll)
+      YahtzeeService.updateRoll(currentRoll)
     };
 
 
