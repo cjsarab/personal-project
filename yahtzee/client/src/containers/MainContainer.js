@@ -36,6 +36,17 @@ const MainContainer = () => {
       YahtzeeService.addRoll(currentRoll)
     };
 
+    const toggleLockDice = (i) => {
+        console.log(i)
+
+
+
+        // const tempArray = [tempBoolArray[0], tempBoolArray[1], tempBoolArray[2], tempBoolArray[3], tempBoolArray[4]];
+
+        // tempArray.splice(i, 1, tempBool)
+        // setLockedDice(tempArray);
+    }
+
 
 
 
@@ -45,7 +56,8 @@ const MainContainer = () => {
     <RollDiceButton
     rollDice={rollDice}/>
     <DiceDisplay
-     currentRoll={currentRoll}/>
+     currentRoll={currentRoll}
+     toggleLockDice={toggleLockDice}/>
     <ScoreCard />
     </>
   );
