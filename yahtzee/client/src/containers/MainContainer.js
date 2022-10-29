@@ -15,7 +15,7 @@ const MainContainer = () => {
     useEffect(() => {
         YahtzeeService.getRolls()
         .then(data => setCurrentRoll(data[0].roll))
-      }, [])
+      }, []);
 
     
     
@@ -29,12 +29,11 @@ const MainContainer = () => {
         };
       };
       const tempArray = [tempDice[0], tempDice[1], tempDice[2], tempDice[3], tempDice[4]];
-      setCurrentRoll(tempArray);
 
-      console.log(currentRoll)
+      setCurrentRoll(tempArray);
+      setRollsThisTurn(rollsThisTurn+1);
 
       YahtzeeService.addRoll(currentRoll)
-      YahtzeeService.updateRoll(currentRoll)
     };
 
 

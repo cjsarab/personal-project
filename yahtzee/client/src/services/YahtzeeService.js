@@ -17,16 +17,16 @@ const YahtzeeService = {
       }).then(res => res.json());
     },
 
-    updateRoll(roll) { 
+    // updateRoll(roll) { 
 
-      return fetch(baseRollsURL + ObjectID, {
-        method: 'PUT',
-        body: JSON.stringify({"roll" : roll}),
-        headers: {
-          'Content-Type': 'application/json'
-        }
-      }).then(res => res.json());
-    },
+    //   return fetch(baseRollsURL + ObjectID, {
+    //     method: 'PUT',
+    //     body: JSON.stringify({"roll" : roll}),
+    //     headers: {
+    //       'Content-Type': 'application/json'
+    //     }
+    //   }).then(res => res.json());
+    // },
 };
 
 export default YahtzeeService;
