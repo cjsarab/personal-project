@@ -37,17 +37,12 @@ const MainContainer = () => {
     };
 
     const toggleLockDice = (i) => {
-        console.log(i)
-
-
-
-        // const tempArray = [tempBoolArray[0], tempBoolArray[1], tempBoolArray[2], tempBoolArray[3], tempBoolArray[4]];
-
-        // tempArray.splice(i, 1, tempBool)
-        // setLockedDice(tempArray);
-    }
-
-
+            const tempBoolObject = lockedDice
+            const tempBoolArray = [tempBoolObject[0], tempBoolObject[1], tempBoolObject[2], tempBoolObject[3], tempBoolObject[4]];
+            const bool = !tempBoolObject[i]
+            tempBoolArray.splice(i, 1, bool)
+            setLockedDice(tempBoolArray)
+        };
 
 
 

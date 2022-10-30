@@ -7,6 +7,7 @@ const DiceDisplay = ({currentRoll, toggleLockDice}) => {
       return <SingleDice
       dieNumber={dieNumber}
       key={index}
+      index={index}
       
       toggleLockDice={toggleLockDice}/>
     });
