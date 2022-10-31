@@ -3,6 +3,7 @@ import React from 'react';
 const RollDiceButton = ({
   rollDice,
   endTurn,
+  turnCounter,
   rollsThisTurn
   }) => {
 
@@ -27,6 +28,7 @@ const RollDiceButton = ({
     }
     </div>
     <div>Turn: {rollsThisTurn}</div>
+    <div>Total turns: {turnCounter}</div>
     </>
   );
 };

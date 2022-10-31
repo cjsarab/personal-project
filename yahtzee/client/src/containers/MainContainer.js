@@ -11,6 +11,7 @@ const MainContainer = () => {
     const [currentRoll, setCurrentRoll] = useState([null, null, null, null, null])
     const [lockedDice, setLockedDice] = useState([false, false, false, false, false])
     const [rollsThisTurn, setRollsThisTurn] = useState(0)
+    const [turnCounter, setTurnCounter] = useState(0)
     const [score, setScore] = useState([0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0])
 
     useEffect(() => {
@@ -48,7 +49,8 @@ const MainContainer = () => {
     const endTurn = () => {
       setRollsThisTurn(0);
       setLockedDice([false, false, false, false, false])
-    }
+      setTurnCounter(turnCounter+1)
+    };
       
     const addNumbers = (total, num) => {
           return total + num;
@@ -68,12 +70,14 @@ const MainContainer = () => {
     <>
     <RollDiceButton
     rollsThisTurn={rollsThisTurn}
+    turnCounter={turnCounter}
     rollDice={rollDice}
     endTurn={endTurn}/>
 
     <DiceDisplay
      currentRoll={currentRoll}
      lockedDice={lockedDice}
+     turnCounter={turnCounter}
      toggleLockDice={toggleLockDice}/>
 
     <ScoreCard 
@@ -83,6 +87,7 @@ const MainContainer = () => {
     addNumbers={addNumbers}
     endTurn={endTurn}
     />
+
     </>
   );
 };

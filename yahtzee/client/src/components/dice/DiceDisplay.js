@@ -1,9 +1,11 @@
 import React from 'react'
 import SingleDie from './SingleDie';
+import GameOver from './GameOver';
 
 const DiceDisplay = ({
   currentRoll, 
   lockedDice,
+  turnCounter,
   toggleLockDice
   }) => {
 
@@ -18,7 +20,13 @@ const DiceDisplay = ({
     });
 
   return (
-    <div>{diceNumbers}</div>
+    <>
+    {turnCounter >= 13 ?
+    <div>
+    <GameOver />
+    </div> :
+    <div>{diceNumbers}</div>}
+    </>
   );
 };
 
