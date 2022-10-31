@@ -46,8 +46,8 @@ const ScoreCard = ({
     <LargeStraight currentRoll={currentRoll} score={score} pushScore={pushScore}  endTurn={endTurn}/>
     <Chance currentRoll={currentRoll} score={score} pushScore={pushScore} addNumbers={addNumbers} endTurn={endTurn}/>
     <Yahtzee currentRoll={currentRoll} score={score} pushScore={pushScore} endTurn={endTurn}/>
-    <TotalLower />
-    <GrandTotal />
+    <TotalLower score={score} pushScore={pushScore} addNumbers={addNumbers}/>
+    <GrandTotal score={score} pushScore={pushScore} addNumbers={addNumbers}/>
     <br />
     </>
     );
