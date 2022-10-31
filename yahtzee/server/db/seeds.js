@@ -6,5 +6,5 @@ db.rolls.insertMany([
 ])
 
 db.scores.insertMany([
-    {score:null}
+    {score: 100}
 ])
