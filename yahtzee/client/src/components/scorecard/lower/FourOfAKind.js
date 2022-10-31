@@ -1,8 +1,51 @@
 import React from 'react';
 
-const FourOfAKind = () => {
+const FourOfAKind = ({
+  currentRoll,
+  score,
+
+  pushScore,
+  addNumbers,
+  endTurn
+  }) => {
+
+  const calculateScore = (currentRoll) => {
+
+    const thisScore1 = currentRoll.filter(number => number === 1);
+    const thisScore2 = currentRoll.filter(number => number === 2);
+    const thisScore3 = currentRoll.filter(number => number === 3);
+    const thisScore4 = currentRoll.filter(number => number === 4);
+    const thisScore5 = currentRoll.filter(number => number === 5);
+    const thisScore6 = currentRoll.filter(number => number === 6);
+
+    if (thisScore1.length >= 4 || 
+        thisScore2.length >= 4 ||
+        thisScore3.length >= 4 ||
+        thisScore4.length >= 4 ||
+        thisScore5.length >= 4 ||
+        thisScore6.length >= 4 ) 
+        {
+    currentRoll = currentRoll.reduce(addNumbers);
+    score.splice(9, 1, currentRoll);
+
+    pushScore(score);
+    endTurn();
+    }
+    else {
+      score.splice(9, 1, 0)
+      pushScore(score)
+    };
+  };
+
+  const handleClick = function() {
+    calculateScore(currentRoll);
+  };
+
   return (
-    <div>FourOfAKind</div>
+    <>
+    <button onClick={handleClick}>Four of a Kind</button>
+    <div> {score[9]} </div>
+    </>
   );
 };
 
