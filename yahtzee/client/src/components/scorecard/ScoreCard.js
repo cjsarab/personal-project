@@ -19,11 +19,18 @@ import Yahtzee from './lower/Yahtzee';
 import TotalLower from './lower/TotalLower';
 import GrandTotal from './lower/GrandTotal';
 
-const ScoreCard = () => {
+const ScoreCard = ({
+  currentRoll,
+  score,
+
+  pushScore,
+  addNumbers,
+  }) => {
+
   return (
     <>
-    <Ones />
-    <Twos />
+    <Ones currentRoll={currentRoll} score={score} pushScore={pushScore} addNumbers={addNumbers}/>
+    <Twos currentRoll={currentRoll}/>
     <Threes />
     <Fours />
     <Fives />

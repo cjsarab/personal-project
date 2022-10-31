@@ -11,6 +11,7 @@ const MainContainer = () => {
     const [currentRoll, setCurrentRoll] = useState([null, null, null, null, null])
     const [lockedDice, setLockedDice] = useState([false, false, false, false, false])
     const [rollsThisTurn, setRollsThisTurn] = useState(0)
+    const [score, setScore] = useState([0,0,0,0,0,0,0,0,0,0,0,0,0])
 
     useEffect(() => {
         YahtzeeService.getRolls()
@@ -42,8 +43,19 @@ const MainContainer = () => {
             const bool = !tempBoolObject[i]
             tempBoolArray.splice(i, 1, bool)
             setLockedDice(tempBoolArray)
-        };
+    };
+      
+    const addNumbers = (total, num) => {
+          return total + num;
+    };
+    
+    const pushScore = (calculatedScore) => {
+      const tempArray = [calculatedScore[0], calculatedScore[1], calculatedScore[2], calculatedScore[3],
+      calculatedScore[4], calculatedScore[5], calculatedScore[6], calculatedScore[7], calculatedScore[8],
+      calculatedScore[9], calculatedScore[10], calculatedScore[11], calculatedScore[12]];
 
+      setScore(tempArray)
+    };
 
 
   return (
@@ -52,8 +64,15 @@ const MainContainer = () => {
     rollDice={rollDice}/>
     <DiceDisplay
      currentRoll={currentRoll}
+
      toggleLockDice={toggleLockDice}/>
-    <ScoreCard />
+    <ScoreCard 
+    currentRoll={currentRoll}
+    score={score}
+
+    pushScore={pushScore}
+    addNumbers={addNumbers}
+    />
     </>
   );
 };

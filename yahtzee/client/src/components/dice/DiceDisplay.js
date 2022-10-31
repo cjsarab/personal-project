@@ -1,10 +1,10 @@
 import React from 'react'
-import SingleDice from './SingleDice';
+import SingleDie from './SingleDie';
 
 const DiceDisplay = ({currentRoll, toggleLockDice}) => {
 
     const diceNumbers = currentRoll.map((dieNumber, index) => {
-      return <SingleDice
+      return <SingleDie
       dieNumber={dieNumber}
       key={index}
       index={index}
