@@ -1,13 +1,24 @@
 import React from 'react';
 
-const SingleDie = ({dieNumber, toggleLockDice, index}) => {
+const SingleDie = ({
+  dieNumber,
+  lockedDice,
+  toggleLockDice, 
+  index
+  }) => {
 
     const handleClick = function() {
         toggleLockDice(index);
     };
 
   return (
-    <div onClick={handleClick}>{dieNumber}</div>
+    <>
+    {lockedDice[index] ?
+    <div className="locked" onClick={handleClick}>{dieNumber}</div>
+    :
+    <div className="unlocked" onClick={handleClick}>{dieNumber}</div>
+    }
+    </>
   );
 };
 

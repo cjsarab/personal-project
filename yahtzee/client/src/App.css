@@ -1,0 +1,7 @@
+.locked {
+    background-color: red;
+}
+
+.unlocked {
+    background-color: green;
+}

@@ -47,6 +47,7 @@ const MainContainer = () => {
 
     const endTurn = () => {
       setRollsThisTurn(0);
+      setLockedDice([false, false, false, false, false])
     }
       
     const addNumbers = (total, num) => {
@@ -72,6 +73,7 @@ const MainContainer = () => {
 
     <DiceDisplay
      currentRoll={currentRoll}
+     lockedDice={lockedDice}
      toggleLockDice={toggleLockDice}/>
 
     <ScoreCard 
