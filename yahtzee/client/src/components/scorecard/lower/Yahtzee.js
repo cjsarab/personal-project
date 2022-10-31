@@ -5,7 +5,6 @@ const Yahtzee = ({
   score,
 
   pushScore,
-  addNumbers,
   endTurn
   }) => {
 

@@ -19,8 +19,7 @@ const MainContainer = () => {
         .then(data => setCurrentRoll(data[0].roll))
       }, []);
 
-    
-    
+      
     
     const rollDice = () => {
       const tempDice = currentRoll;

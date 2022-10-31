@@ -2,7 +2,7 @@ import React from 'react';
 
 const GameOver = () => {
   return (
-    <div>GameOver!</div>
+    <div>Game Over!</div>
   );
 };
 

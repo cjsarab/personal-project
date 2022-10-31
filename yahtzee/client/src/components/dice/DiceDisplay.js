@@ -21,11 +21,13 @@ const DiceDisplay = ({
 
   return (
     <>
-    {turnCounter >= 13 ?
+    {
+    turnCounter >= 13 ?
     <div>
     <GameOver />
     </div> :
-    <div>{diceNumbers}</div>}
+    <div>{diceNumbers}</div>
+    }
     </>
   );
 };
