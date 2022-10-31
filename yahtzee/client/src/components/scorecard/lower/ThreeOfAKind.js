@@ -34,6 +34,7 @@ const ThreeOfAKind = ({
     else {
       score.splice(8, 1, 0)
       pushScore(score)
+      endTurn();
     };
   };
 

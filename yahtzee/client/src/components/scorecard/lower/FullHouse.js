@@ -46,6 +46,7 @@ const FullHouse = ({
     else {
       score.splice(10, 1, 0)
       pushScore(score)
+      endTurn();
     };
   };
 

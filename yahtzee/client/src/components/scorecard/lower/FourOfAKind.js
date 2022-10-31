@@ -34,6 +34,7 @@ const FourOfAKind = ({
     else {
       score.splice(9, 1, 0)
       pushScore(score)
+      endTurn();
     };
   };
 
