@@ -15,16 +15,16 @@ const Ones = ({
     console.log(score)
     score.splice(0, 1, thisScore)
     pushScore(score)
-  }
+  };
 
   const handleClick = function() {
     calculateScore(currentRoll);
-  }
+  };
 
   return (
     <>
     <button onClick={handleClick}>Ones</button>
-    <div> {score} </div>
+    <div> {score[0]} </div>
     </>
   );
 };

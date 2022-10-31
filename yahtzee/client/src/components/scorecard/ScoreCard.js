@@ -30,11 +30,11 @@ const ScoreCard = ({
   return (
     <>
     <Ones currentRoll={currentRoll} score={score} pushScore={pushScore} addNumbers={addNumbers}/>
-    <Twos currentRoll={currentRoll}/>
-    <Threes />
-    <Fours />
-    <Fives />
-    <Sixes />
+    <Twos currentRoll={currentRoll} score={score} pushScore={pushScore} addNumbers={addNumbers}/>
+    <Threes currentRoll={currentRoll} score={score} pushScore={pushScore} addNumbers={addNumbers}/>
+    <Fours currentRoll={currentRoll} score={score} pushScore={pushScore} addNumbers={addNumbers}/>
+    <Fives currentRoll={currentRoll} score={score} pushScore={pushScore} addNumbers={addNumbers}/>
+    <Sixes currentRoll={currentRoll} score={score} pushScore={pushScore} addNumbers={addNumbers}/>
     <TotalUpper />
     <Bonus />
     <br />
