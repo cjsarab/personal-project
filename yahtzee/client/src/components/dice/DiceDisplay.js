@@ -6,7 +6,10 @@ const DiceDisplay = ({
   currentRoll, 
   lockedDice,
   turnCounter,
-  toggleLockDice
+  score,
+
+  toggleLockDice,
+  endGame
   }) => {
 
     const diceNumbers = currentRoll.map((dieNumber, index) => {
@@ -24,7 +27,7 @@ const DiceDisplay = ({
     {
     turnCounter >= 13 ?
     <div>
-    <GameOver />
+    <GameOver endGame={endGame} score={score}/>
     </div> :
     <div>{diceNumbers}</div>
     }

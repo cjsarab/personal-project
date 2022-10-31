@@ -1,4 +1,5 @@
 const baseRollsURL = 'http://localhost:9000/api/rolls';
+const baseScoresURL = 'http://localhost:9000/api/scores';
 
 const YahtzeeService = {
 
@@ -11,6 +12,16 @@ const YahtzeeService = {
       return fetch(baseRollsURL, {
         method: 'POST',
         body: JSON.stringify({"roll" : roll}),
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      }).then(res => res.json());
+    },
+    
+    addScore(score) {
+      return fetch(baseScoresURL, {
+        method: 'POST',
+        body: JSON.stringify({"score" : score}),
         headers: {
           'Content-Type': 'application/json'
         }

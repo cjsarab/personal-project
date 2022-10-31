@@ -12,14 +12,14 @@ const MainContainer = () => {
     const [lockedDice, setLockedDice] = useState([false, false, false, false, false])
     const [rollsThisTurn, setRollsThisTurn] = useState(0)
     const [turnCounter, setTurnCounter] = useState(0)
-    const [score, setScore] = useState([0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0])
+    const [score, setScore] = useState([0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0])
 
     useEffect(() => {
         YahtzeeService.getRolls()
         .then(data => setCurrentRoll(data[0].roll))
       }, []);
 
-      
+
     
     const rollDice = () => {
       const tempDice = currentRoll;
@@ -59,10 +59,16 @@ const MainContainer = () => {
       const tempArray = [calculatedScore[0], calculatedScore[1], calculatedScore[2], calculatedScore[3],
       calculatedScore[4], calculatedScore[5], calculatedScore[6], calculatedScore[7], calculatedScore[8],
       calculatedScore[9], calculatedScore[10], calculatedScore[11], calculatedScore[12], calculatedScore[13],
-      calculatedScore[14], calculatedScore[15], calculatedScore[16], calculatedScore[17]];
+      calculatedScore[14], calculatedScore[15], calculatedScore[16]];
 
       setScore(tempArray)
     };
+
+    const endGame = () => {
+      const finalScore = score[16]
+      console.log(finalScore)
+      YahtzeeService.addScore(score[16])
+    }
 
 
   return (
@@ -77,7 +83,9 @@ const MainContainer = () => {
      currentRoll={currentRoll}
      lockedDice={lockedDice}
      turnCounter={turnCounter}
-     toggleLockDice={toggleLockDice}/>
+     score={score}
+     toggleLockDice={toggleLockDice}
+     endGame={endGame}/>
 
     <ScoreCard 
     currentRoll={currentRoll}

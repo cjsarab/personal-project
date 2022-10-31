@@ -1,8 +1,17 @@
 import React from 'react';
 
-const GameOver = () => {
+const GameOver = ({score, endGame}) => {
+
+  const handleClick = function() {
+    endGame();
+    console.log(score[16])
+  };
+
   return (
-    <div>Game Over!</div>
+    <>
+    <button onClick={handleClick}>Game Over!</button>
+    <div>Your score was {score[16]}</div>
+    </>
   );
 };
 
