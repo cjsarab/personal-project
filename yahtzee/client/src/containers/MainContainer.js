@@ -42,6 +42,7 @@ const MainContainer = () => {
             const tempBoolArray = [tempBoolObject[0], tempBoolObject[1], tempBoolObject[2], tempBoolObject[3], tempBoolObject[4]];
             const bool = !tempBoolObject[i]
             tempBoolArray.splice(i, 1, bool)
+
             setLockedDice(tempBoolArray)
     };
 
@@ -65,10 +66,10 @@ const MainContainer = () => {
     };
 
     const endGame = () => {
-      const finalScore = score[16]
+      const finalScore = (score[16])
       console.log(finalScore)
       YahtzeeService.addScore(score[16])
-    }
+    };
 
 
   return (
