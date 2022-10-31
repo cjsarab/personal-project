@@ -41,11 +41,11 @@ const ScoreCard = ({
     <br />
     <ThreeOfAKind currentRoll={currentRoll} score={score} pushScore={pushScore} addNumbers={addNumbers} endTurn={endTurn}/>
     <FourOfAKind currentRoll={currentRoll} score={score} pushScore={pushScore} addNumbers={addNumbers} endTurn={endTurn}/>
-    <FullHouse currentRoll={currentRoll} score={score} pushScore={pushScore} addNumbers={addNumbers} endTurn={endTurn}/>
-    <SmallStraight currentRoll={currentRoll} score={score} pushScore={pushScore} addNumbers={addNumbers} endTurn={endTurn}/>
-    <LargeStraight currentRoll={currentRoll} score={score} pushScore={pushScore} addNumbers={addNumbers} endTurn={endTurn}/>
+    <FullHouse currentRoll={currentRoll} score={score} pushScore={pushScore} endTurn={endTurn}/>
+    <SmallStraight currentRoll={currentRoll} score={score} pushScore={pushScore} endTurn={endTurn}/>
+    <LargeStraight currentRoll={currentRoll} score={score} pushScore={pushScore}  endTurn={endTurn}/>
     <Chance currentRoll={currentRoll} score={score} pushScore={pushScore} addNumbers={addNumbers} endTurn={endTurn}/>
-    <Yahtzee currentRoll={currentRoll} score={score} pushScore={pushScore} addNumbers={addNumbers} endTurn={endTurn}/>
+    <Yahtzee currentRoll={currentRoll} score={score} pushScore={pushScore} endTurn={endTurn}/>
     <TotalLower />
     <GrandTotal />
     <br />

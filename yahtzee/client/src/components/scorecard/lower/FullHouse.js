@@ -5,7 +5,6 @@ const FullHouse = ({
   score,
 
   pushScore,
-  addNumbers,
   endTurn
   }) => {
 
@@ -39,7 +38,6 @@ const FullHouse = ({
     
     if (matchTwo && matchThree) {
     score.splice(10, 1, 25);
-
     pushScore(score);
     endTurn();
     }
