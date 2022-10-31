@@ -25,16 +25,17 @@ const ScoreCard = ({
 
   pushScore,
   addNumbers,
+  endTurn
   }) => {
 
   return (
     <>
-    <Ones currentRoll={currentRoll} score={score} pushScore={pushScore} addNumbers={addNumbers}/>
-    <Twos currentRoll={currentRoll} score={score} pushScore={pushScore} addNumbers={addNumbers}/>
-    <Threes currentRoll={currentRoll} score={score} pushScore={pushScore} addNumbers={addNumbers}/>
-    <Fours currentRoll={currentRoll} score={score} pushScore={pushScore} addNumbers={addNumbers}/>
-    <Fives currentRoll={currentRoll} score={score} pushScore={pushScore} addNumbers={addNumbers}/>
-    <Sixes currentRoll={currentRoll} score={score} pushScore={pushScore} addNumbers={addNumbers}/>
+    <Ones currentRoll={currentRoll} score={score} pushScore={pushScore} addNumbers={addNumbers} endTurn={endTurn}/>
+    <Twos currentRoll={currentRoll} score={score} pushScore={pushScore} addNumbers={addNumbers} endTurn={endTurn}/>
+    <Threes currentRoll={currentRoll} score={score} pushScore={pushScore} addNumbers={addNumbers} endTurn={endTurn}/>
+    <Fours currentRoll={currentRoll} score={score} pushScore={pushScore} addNumbers={addNumbers} endTurn={endTurn}/>
+    <Fives currentRoll={currentRoll} score={score} pushScore={pushScore} addNumbers={addNumbers} endTurn={endTurn}/>
+    <Sixes currentRoll={currentRoll} score={score} pushScore={pushScore} addNumbers={addNumbers} endTurn={endTurn}/>
     <Bonus score={score} pushScore={pushScore} addNumbers={addNumbers}/>
     <TotalUpper score={score} pushScore={pushScore} addNumbers={addNumbers}/>
     <br />

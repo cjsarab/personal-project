@@ -1,14 +1,33 @@
 import React from 'react';
 
-const RollDiceButton = ({rollDice}) => {
+const RollDiceButton = ({
+  rollDice,
+  endTurn,
+  rollsThisTurn
+  }) => {
 
     const handleClick = () => {
-        rollDice();
-        return
+      rollDice();
+    };
+
+    const handleEndTurn = () => {
+      endTurn();
     };
 
   return (
-    <button onClick={handleClick}>Roll Dice!</button>
+    <>
+    <div>
+    {
+    rollsThisTurn < 3 ?
+    <div>
+        <button onClick={handleClick}>Roll Dice!</button>
+    </div> 
+    :
+    <button onClick={handleEndTurn}>End Turn</button>
+    }
+    </div>
+    <div>Turn: {rollsThisTurn}</div>
+    </>
   );
 };
 

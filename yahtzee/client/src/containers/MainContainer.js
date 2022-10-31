@@ -44,6 +44,10 @@ const MainContainer = () => {
             tempBoolArray.splice(i, 1, bool)
             setLockedDice(tempBoolArray)
     };
+
+    const endTurn = () => {
+      setRollsThisTurn(0);
+    }
       
     const addNumbers = (total, num) => {
           return total + num;
@@ -62,17 +66,20 @@ const MainContainer = () => {
   return (
     <>
     <RollDiceButton
-    rollDice={rollDice}/>
+    rollsThisTurn={rollsThisTurn}
+    rollDice={rollDice}
+    endTurn={endTurn}/>
+
     <DiceDisplay
      currentRoll={currentRoll}
-
      toggleLockDice={toggleLockDice}/>
+
     <ScoreCard 
     currentRoll={currentRoll}
     score={score}
-
     pushScore={pushScore}
     addNumbers={addNumbers}
+    endTurn={endTurn}
     />
     </>
   );

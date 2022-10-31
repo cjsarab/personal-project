@@ -6,15 +6,17 @@ const Ones = ({
 
   pushScore,
   addNumbers,
+  endTurn
   }) => {
 
   const calculateScore = (currentRoll) => {
 
-    var thisScore = currentRoll.filter(number => number === 1)
-    thisScore = thisScore.reduce(addNumbers)
-    console.log(score)
-    score.splice(0, 1, thisScore)
-    pushScore(score)
+    var thisScore = currentRoll.filter(number => number === 1);
+    thisScore = thisScore.reduce(addNumbers);
+    score.splice(0, 1, thisScore);
+
+    pushScore(score);
+    endTurn();
   };
 
   const handleClick = function() {
