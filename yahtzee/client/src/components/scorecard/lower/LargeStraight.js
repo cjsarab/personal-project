@@ -1,8 +1,47 @@
 import React from 'react';
 
-const LargeStraight = () => {
+const LargeStraight = ({
+  currentRoll,
+  score,
+
+  pushScore,
+  endTurn
+  }) => {
+
+  const calculateScore = (currentRoll) => {
+
+    const thisScore1 = currentRoll.some(number => number === 1);
+    const thisScore2 = currentRoll.some(number => number === 2);
+    const thisScore3 = currentRoll.some(number => number === 3);
+    const thisScore4 = currentRoll.some(number => number === 4);
+    const thisScore5 = currentRoll.some(number => number === 5);
+    const thisScore6 = currentRoll.some(number => number === 6);
+
+    if (
+    (thisScore1 && thisScore2 && thisScore3 && thisScore4 && thisScore5) ||
+    (thisScore2 && thisScore3 && thisScore4 && thisScore5 && thisScore6))
+
+    {
+      score.splice(12, 1, 40);
+      pushScore(score);
+      endTurn();
+    }
+    else {
+      score.splice(12, 1, 0)
+      pushScore(score)
+      endTurn();
+    };
+  };
+
+  const handleClick = function() {
+    calculateScore(currentRoll);
+  };
+
   return (
-    <div>LargeStraight</div>
+    <>
+    <button onClick={handleClick}>Large Straight</button>
+    <div> {score[12]} </div>
+    </>
   );
 };
 
