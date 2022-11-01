@@ -11,12 +11,20 @@ const Fives = ({
 
   const calculateScore = (currentRoll) => {
 
+    if (currentRoll.some (number => number === 5))
+    {
     var thisScore = currentRoll.filter(number => number === 5);
     thisScore = thisScore.reduce(addNumbers);
     score.splice(4, 1, thisScore);
 
     pushScore(score);
     endTurn();
+    }
+    else {
+      score.splice(4, 1, 0)
+      pushScore(score)
+      endTurn();
+    };
   };
 
   const handleClick = function() {
