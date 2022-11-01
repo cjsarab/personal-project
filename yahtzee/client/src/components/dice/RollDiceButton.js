@@ -17,18 +17,25 @@ const RollDiceButton = ({
 
   return (
     <>
+    <div className="turn-display">
     <div>
     {
     rollsThisTurn < 3 ?
     <div>
-        <button onClick={handleClick}>Roll Dice!</button>
+        <button className="roll-dice" onClick={handleClick}>Roll Dice!</button>
     </div> 
     :
-    <button onClick={handleEndTurn}>End Turn</button>
+    <button className="end-turn" onClick={handleEndTurn}>End Turn</button>
     }
     </div>
-    <div>Turn: {rollsThisTurn}</div>
-    <div>Total turns: {turnCounter}</div>
+    
+      <div className="turn-display-rolls">
+        <div>Turn: {rollsThisTurn} </div>
+      </div>
+      <div className="turn-display-turns">
+        <div>Total turns: {turnCounter}</div>
+      </div>
+    </div>
     </>
   );
 };

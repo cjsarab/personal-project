@@ -38,7 +38,7 @@ const ScoreCard = ({
     <Sixes currentRoll={currentRoll} score={score} pushScore={pushScore} addNumbers={addNumbers} endTurn={endTurn}/>
     <Bonus score={score} pushScore={pushScore} addNumbers={addNumbers}/>
     <TotalUpper score={score} pushScore={pushScore} addNumbers={addNumbers}/>
-    <br />
+    
     <ThreeOfAKind currentRoll={currentRoll} score={score} pushScore={pushScore} addNumbers={addNumbers} endTurn={endTurn}/>
     <FourOfAKind currentRoll={currentRoll} score={score} pushScore={pushScore} addNumbers={addNumbers} endTurn={endTurn}/>
     <FullHouse currentRoll={currentRoll} score={score} pushScore={pushScore} endTurn={endTurn}/>

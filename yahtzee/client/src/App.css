@@ -1,3 +1,64 @@
+.main-container {
+    background-color: cadetblue;
+}
+
+.game-container {
+    padding: 2em
+}
+
+.roll-dice-button {
+    display: flex;
+    justify-content: center;
+    padding: 2em;
+    margin: 2em;
+    background-color: crimson;
+}
+
+.roll-dice {
+    background-color: dodgerblue;
+    color: black;
+    border: 2px solid black;
+    border-radius: 12px;
+    height:4em;
+}
+
+.roll-dice:hover {
+    background-color: greenyellow;
+    color: black;
+}
+
+.turn-display {
+    display: flex;
+    align-items: center;
+    background-color: blueviolet;
+}
+
+.turn-display-rolls {
+    display: flex;
+    background-color: peru;
+    padding: 2em;
+    margin: 2em;
+}
+
+.turn-display-turns {
+    display: flex;
+    background-color: blue;
+    padding: 2em;
+    margin: 2em;
+}
+
+.dice-display {
+    display: flex;
+}
+
+
+
+.scorecard {
+    display: grid;
+}
+
+
+
 .locked {
     background-color: red;
 }

@@ -34,22 +34,22 @@ const MainContainer = () => {
       setCurrentRoll(tempArray);
       setRollsThisTurn(rollsThisTurn+1);
 
-      YahtzeeService.addRoll(currentRoll)
+      YahtzeeService.addRoll(currentRoll);
     };
 
     const toggleLockDice = (i) => {
-            const tempBoolObject = lockedDice
-            const tempBoolArray = [tempBoolObject[0], tempBoolObject[1], tempBoolObject[2], tempBoolObject[3], tempBoolObject[4]];
-            const bool = !tempBoolObject[i]
-            tempBoolArray.splice(i, 1, bool)
+        const tempBoolObject = lockedDice;
+        const tempBoolArray = [tempBoolObject[0], tempBoolObject[1], tempBoolObject[2], tempBoolObject[3], tempBoolObject[4]];
+        const bool = !tempBoolObject[i];
+        tempBoolArray.splice(i, 1, bool);
 
-            setLockedDice(tempBoolArray)
+          setLockedDice(tempBoolArray);
     };
 
     const endTurn = () => {
       setRollsThisTurn(0);
-      setLockedDice([false, false, false, false, false])
-      setTurnCounter(turnCounter+1)
+      setLockedDice([false, false, false, false, false]);
+      setTurnCounter(turnCounter+1);
     };
       
     const addNumbers = (total, num) => {
@@ -62,39 +62,48 @@ const MainContainer = () => {
       calculatedScore[9], calculatedScore[10], calculatedScore[11], calculatedScore[12], calculatedScore[13],
       calculatedScore[14], calculatedScore[15], calculatedScore[16]];
 
-      setScore(tempArray)
+      setScore(tempArray);
     };
 
     const endGame = () => {
-      const finalScore = (score[16])
-      console.log(finalScore)
-      YahtzeeService.addScore(score[16])
+      const finalScore = (score[16]);
+      console.log(finalScore); //Can be removed
+      YahtzeeService.addScore(score[16]);
     };
 
 
   return (
     <>
-    <RollDiceButton
-    rollsThisTurn={rollsThisTurn}
-    turnCounter={turnCounter}
-    rollDice={rollDice}
-    endTurn={endTurn}/>
+    <div className="game-container">
 
-    <DiceDisplay
-     currentRoll={currentRoll}
-     lockedDice={lockedDice}
-     turnCounter={turnCounter}
-     score={score}
-     toggleLockDice={toggleLockDice}
-     endGame={endGame}/>
+      <div className="roll-dice-button">
+        <RollDiceButton
+        rollsThisTurn={rollsThisTurn}
+        turnCounter={turnCounter}
+        rollDice={rollDice}
+        endTurn={endTurn}/>
+      </div>
 
-    <ScoreCard 
-    currentRoll={currentRoll}
-    score={score}
-    pushScore={pushScore}
-    addNumbers={addNumbers}
-    endTurn={endTurn}
-    />
+      <div className="dice-display">
+        <DiceDisplay
+        currentRoll={currentRoll}
+        lockedDice={lockedDice}
+        turnCounter={turnCounter}
+        score={score}
+        toggleLockDice={toggleLockDice}
+        endGame={endGame}/>
+      </div>
+
+      <div className="scorecard">
+        <ScoreCard 
+        currentRoll={currentRoll}
+        score={score}
+        pushScore={pushScore}
+        addNumbers={addNumbers}
+        endTurn={endTurn}/>
+      </div>
+      
+    </div>
 
     </>
   );
