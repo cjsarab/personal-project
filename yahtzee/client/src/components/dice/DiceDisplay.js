@@ -24,13 +24,17 @@ const DiceDisplay = ({
 
   return (
     <>
+    <div className="dice-displayer">
     {
     turnCounter >= 13 ?
     <div>
     <GameOver endGame={endGame} score={score}/>
     </div> :
+    <div className="dice">
     <div>{diceNumbers}</div>
+    </div>
     }
+    </div>
     </>
   );
 };

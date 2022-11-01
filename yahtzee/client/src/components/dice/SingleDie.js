@@ -13,11 +13,13 @@ const SingleDie = ({
 
   return (
     <>
+    <div className="single-die">
     {lockedDice[index] ?
     <div className="locked" onClick={handleClick}>{dieNumber}</div>
     :
     <div className="unlocked" onClick={handleClick}>{dieNumber}</div>
     }
+    </div>
     </>
   );
 };

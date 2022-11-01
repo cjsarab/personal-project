@@ -49,6 +49,26 @@
 
 .dice-display {
     display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: orange;
+}
+
+.dice-displayer {
+    display: flex;
+    flex-direction: row;
+}
+
+.dice {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.single-die {
+    display: flex;
+    justify-content: center;
+    color: white
 }
 
 
@@ -61,8 +81,14 @@
 
 .locked {
     background-color: red;
+    padding: 0.5em;
+    margin: 0.5em
+
 }
 
 .unlocked {
     background-color: green;
+    padding: 0.5em;
+    margin: 0.5em;
+
 }
